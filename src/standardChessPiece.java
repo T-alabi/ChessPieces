@@ -9,6 +9,14 @@ public class standardChessPiece {
     color = lor;
     }
 
+    public boolean HorizontalMove(int row, int col){
+        return row == getRow() && (col>= 0)  && (col <=7); // stay in row move column (so this is horizontal )
+    }
+
+    public boolean VerticalMove(int row, int col) {
+        return (row>= 0)  && (row <=7) && col == getColumn();
+    }
+
     public int getRow( ){
         return row;
     }
